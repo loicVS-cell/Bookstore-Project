@@ -27,7 +27,7 @@ public class Review {
     private String text;
     private LocalDateTime createdAt;
 
-    @JsonIgnore // Prevents recursive JSON serialization through the bidirectional relationships.
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "userId")
     private User user;

@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 import java.util.List;
 
 @Entity
-@Table(name = "users") // Avoids using the potentially reserved SQL table name "user".
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,7 +23,7 @@ public class User {
     private String username;
     @Column(unique = true)
     private String email;
-    // Store a password hash here, never the user's plain-text password.
+
     private String password;
     private String role;
 
